@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cvećara</title>
+        <link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet'>
+        <link rel="stylesheet" href="styles/css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+        <link rel="icon" type="image/png" href="styles/images/favicon.png">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    
+    <body>
+        <img src="styles/images/pozadina.jpg" alt="" id="pozadina">
+
+        <form autocomplete="off" class="row">
+            <div class="sve">
+                <div class="col-4">
+                    <fieldset class="oc">
+                        <legend>Odaberite cveće:</legend>
+        
+                        <div class="input-num">
+                            <div class="odaberite-cvece">
+                                <div class="number">
+                                    <input type="number" name="ruza" id="ruza" placeholder="150 din. po cvetu" onclick="resetBgCol(this)">
+                                    <label for="ruza">ruže</label>
+                                </div>
+                                <div class="number">
+                                    <input type="number" name="ljiljan" id="ljiljan" placeholder="120 din. po cvetu" onclick="resetBgCol(this)">
+                                    <label for="ljiljan">ljiljani</label>
+                                </div>
+                                <div class="number">
+                                    <input type="number" name="gerber" id="gerber" placeholder="70 din. po cvetu" onclick="resetBgCol(this)">
+                                    <label for="gerber">gerberi</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+        
+                    <fieldset class="dod-pok">
+                        <legend>Dodatni pokloni:</legend>
+        
+                        <div class="dodatni-pokloni">
+                            <div class="bomb">
+                                <input type="checkbox" name="dodatak" id="bombonjera" value="bombonjera">
+                                <label for="bombonjera">bombonjera</label>
+                            </div>
+            
+                            <div>
+                                <input type="checkbox" name="dodatak" id="cokolada" value="čokolada">
+                                <label for="cokolada">čokolada</label>
+                            </div>
+            
+                            <div>
+                                <input type="checkbox" name="dodatak" id="sampanjac" value="šampanjac">
+                                <label for="sampanjac">šampanjac</label>
+                            </div>
+                        </div>
+                    </fieldset>
+        
+                    <fieldset class="mob">
+                        <legend>Plaćanje:</legend>
+
+                        <p class="napomena">*Prilikom plaćanja karticom ostvarujete <strong>10% popusta</strong> na iznos preko 2.000 dinara</p>
+        
+                        <div class="radio-placanje">
+                            <div>
+                                <input type="radio" name="placanje" id="cash" value="cash" checked>
+                                <label for="cash">keš</label>
+                            </div>
+            
+                            <div>
+                                <input type="radio" name="placanje" id="card" value="card">
+                                <label for="card">kartica</label>
+                            </div>
+                        </div>
+
+                        <div class="col-2 btns">
+                            <input type="button" value="Izračunaj" id="izracunaj"><br>
+                            <input type="reset" value="Resetuj" id="resetuj">
+                        </div>
+    
+                    </fieldset>
+                </div>
+
+                <div class="col-6">
+                    <div id="porudzbina">
+                        <h1 id="porNaslov">Vaša porudžbina:</h1>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <script type="module" src="script.js"></script>
+        <script>
+            const resetBgCol = (element) => element.style.backgroundColor != '#FDF6F7' ? element.style.backgroundColor = '#FDF6F7' : 0;
+        </script>
+    </body>
+</html>
